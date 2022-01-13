@@ -1,8 +1,20 @@
 <h1>Flats</h1>
+
 <% @flats.each do |flat| %>
-  <h4><%= flat.name %></h4>
-  <p><%= flat.description %></p>
-  <p><%= flat.address %></p>
-  <p><%= flat.price_per_night %></p>
-  <p><%= flat.number_of_guests %></p>
+<div class="card-control">
+  <div class="card" style="width: 456px; padding 20px; height: 46rem; margin: 12px;">
+    <img class="card-img-top" src="https://picsum.photos/id/<%=rand(1000..1100)%>/100/100" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <%# <p class="card-text"><%= flat.description %></p>
+      <%# <p class="card-text"><%= flat.address %></p>
+      <p class="card-text">Price per night $<%= flat.price_per_night %></p>
+      <p class="card-text">Number of guests: <%= flat.number_of_guests %></p>
+      <%= link_to flat.name, flat_path(flat.id) %>
+      <% #flats_path goest to action show...why can't we use instance variable as argument? %>
+
+      <%# <%link_to class="btn btn-primary">See details%<p> %>
+    </div>
+  </div>
+</div>
 <% end %>

@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+img {
+  height: 300px;
+  width: 200px;
+}
+
+ .card-control {
+  display: inline-flex;
+ }
+
+.card {
+  height: 450px;
+}
+
+ .flat-detail-card {
+  height: 560px;
+  width: 460px;
+  background-color: lightgray;
+  margin: 18px;
+  padding: 12px;
+}
